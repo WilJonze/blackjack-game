@@ -1,0 +1,147 @@
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background: linear-gradient(-45deg, #121212, #00021e, #130034);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite alternate;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0,0,0,0.5);
+    border: 5px solid #6200ee;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 15px 15px 15px;
+    width: 45%;
+    height: 50%;
+    margin: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.header {
+    margin-bottom: 40px;
+    font-size: 75px;
+    background: linear-gradient(-45deg, #FFEE85, #FB9488, #f96e89);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite alternate;
+}
+
+.message {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.cards {
+    font-size: 20px;
+    font-weight: bolder;  
+    color: whitesmoke;
+}
+
+.sum {
+    font-size: 20px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.button-start,
+.button-draw,
+.button-new {
+    background-color: #6200ee;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+}
+
+.button-start:hover,
+.button-draw:hover,
+.button-new:hover {
+    background-color: #BB86fc;
+    color:black
+}
+
+
+
+
+
+
+/* Keyframes */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 980px) {
+
+    .box {
+        width: auto;
+        height: 60%;
+    }
+
+  }
+
+  @media screen and (max-width: 520px) {
+
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .header {
+        font-size: 60px;
+    }
+
+    .message,
+    .cards,
+    .sum {
+        font-size: 20px;
+    }
+
+
+    .button-start,
+    .button-new,
+    .button-draw {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+
+  }
