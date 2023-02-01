@@ -10,8 +10,8 @@ let sumEl = document.querySelector("#sum-el")
 let startButton = document.querySelector("#button-start-el")
 let drawButton = document.querySelector("#button-draw-el")
 
-startButton.addEventListener("click", startGame())
-drawButton.addEventListener("click", newCard())
+startButton.addEventListener("click", startGame)
+drawButton.addEventListener("click", newCard)
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random()*13) + 1
