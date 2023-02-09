@@ -9,9 +9,13 @@ let cardEl = document.querySelector("#cards-el");
 let sumEl = document.querySelector("#sum-el")
 let startButton = document.querySelector("#button-start-el")
 let drawButton = document.querySelector("#button-draw-el")
+let newButton = document.querySelector("#button-new-el")
+
 
 startButton.addEventListener("click", startGame)
 drawButton.addEventListener("click", newCard)
+newButton.addEventListener("click", newGame)
+
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random()*13) + 1
@@ -59,4 +63,11 @@ function newCard() {
         cards.push(card)
         renderGame()
     }
+}
+
+function newGame() {
+    cardEl.textContent = "Cards: "
+    messageEl.textContent = "Want to play another?"
+    sumEl.textContent = "Sum: "
+
 }
